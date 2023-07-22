@@ -4,7 +4,7 @@ declare -a databases=("cve" "exploitdb" "openvas" "osvdb" "scipvuldb" "securityf
 "securitytracker" "xforce")
 
 for DB in "${databases[@]}"; do
-    /usr/bin/wget https://www.computec.ch/projekte/vulscan/download/${DB}.csv
+    /usr/local/bin/wget https://www.computec.ch/projekte/vulscan/download/${DB}.csv
     
     if [ -f ${DB}.csv.1 ]; then
         mv ${DB}.csv.1 ${DB}.csv
